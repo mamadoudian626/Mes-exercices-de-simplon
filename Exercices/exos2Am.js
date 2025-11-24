@@ -1,11 +1,10 @@
 
-let motDePasse = "MonSuper"; // Le mot de passe à vérifier
+let motDePasse = "MonSuperMDP123"; // Le mot de passe à vérifier
 
 
 //Vérifie si la longueur du mot de passe est suffisante
 function verifierLongueur(mdp) {
-    const LONGUEUR_MIN = 8; // Constante locale, accessible seulement dans cette fonction
-
+    const LONGUEUR_MIN = 8;
     if (mdp.length >= LONGUEUR_MIN) {
         // Mot de passe assez long
         return true;
