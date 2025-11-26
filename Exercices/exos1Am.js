@@ -40,7 +40,7 @@ function verifierReduction(estFidele, prix, taux) {
     let prixApresReduction = prix;
 
     // Si le client est fidèle ET que le prix dépasse 200 €
-    if (estFidele === true && prix > 200) {
+    if (estFidele && prix > 200) {
         // On applique la réduction
         prixApresReduction = prix - (prix * taux);
     }
