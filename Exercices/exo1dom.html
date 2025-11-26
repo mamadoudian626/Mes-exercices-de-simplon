@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercice DOM 1</title>
+  </head>
+  <body>
+    <!-- Titre principal avec un ID -->
+    <h1 id="titre-principal">Titre d'origine</h1>
+
+    <!-- Liste avec trois éléments ayant la même classe -->
+    <ul>
+      <li class="item-liste">Élément 1</li>
+      <li class="item-liste">Élément 2</li>
+      <li class="item-liste">Élément 3</li>
+    </ul>
+
+    <script>
+      const titre = document.querySelector("#titre-principal");
+      titre.textContent = "DOM Maîtrisé !";
+
+      // 2. Sélectionner le PREMIER élément <li>
+
+      const premierItem = document.querySelector(".item-liste");
+      premierItem.textContent = "Element 1 a éte modifie";
+      
+      // BONUS : Sélectionner TOUS les éléments ayant la classe
+
+      const tousLesItems = document.querySelectorAll(".item-liste");
+      console.log("Tous les éléments de la liste :", tousLesItems);
+    </script>
+  </body>
+</html>
