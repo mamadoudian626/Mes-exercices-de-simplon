@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2 - Événement Click</title>
+</head>
+<body>
+
+    <!-- Bouton que l'utilisateur peut cliquer -->
+    <button id="btn-magique">Clique ici</button>
+    <p id="message"></p>
+
+    <script>
+        // Sélection des éléments
+        const btnMagique = document.querySelector('#btn-magique'); // Le bouton
+        const message = document.querySelector('#message'); 
+
+        // Ajout de l'événement 'click' au bouton
+        btnMagique.addEventListener('click', function() {
+            // Changer le contenu du paragraphe
+            message.textContent = "Le bouton a été cliqué à l'instant.";
+            // Défi : effacer le message après 3 secondes
+            setTimeout(function() {
+                message.textContent = ""; 
+            }, 3000); 
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3 - Scroll Event</title>
+
+    <style>
+        /* Petite boite fixe pour afficher la position du scroll */
+        #info-scroll {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: black;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Boîte fixe qui va afficher la position du scroll -->
+    <div id="info-scroll">Position de défilement : 0 pixels</div>
+
+    <!-- Contenu long pour permettre le scroll -->
+    <!-- Ici je génère un long texte volontairement -->
+    <h1>Bienvenue dans l'exercice scroll</h1>
+    <p>Défile pour voir la magie ✨</p>
+
+    <!-- 50 lignes pour créer une grande page -->
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <script>
+        // Sélection de la boîte où afficher la position du scroll
+        const infoScroll = document.querySelector('#info-scroll');
+
+        // Ajout de l'événement scroll sur la fenêtre (window)
+        window.addEventListener('scroll', function () {
+
+            // Récupérer la position verticale de défilement
+            const position = window.scrollY; 
+            // Mettre à jour le texte dans la boîte
+            infoScroll.textContent = "Position de défilement : " + position + " pixels";
+        });
+    </script>
+
+</body>
+</html>
