@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 4 - Form & Load Events</title>
+</head>
+<body>
+    <form id="formulaire-contact">
+        <input type="text" id="prenom" placeholder="Entrez votre prénom">
+        <button type="submit">Envoyer</button>
+    </form>
+    <script>
+        /* ---------------------------------------------------------
+           PARTIE B : Load Event — Quand la page est complètement chargée
+        --------------------------------------------------------- */
+        window.addEventListener("load", function () {
+            console.log("Page entièrement chargée et prête pour le DOM !");
+        });
+
+        /* ---------------------------------------------------------
+           PARTIE A : Intercepter la soumission du formulaire (submit)
+        --------------------------------------------------------- */
+
+        // 1. Cibler le formulaire et le champ
+        const form = document.getElementById("formulaire-contact");
+        const champPrenom = document.getElementById("prenom");
+
+        // 2. Ajouter l'événement submit au formulaire
+        form.addEventListener("submit", function (e) {
+
+            // Empêche le rechargement de la page
+            e.preventDefault();
+
+            // Vérifier si le champ est vide
+            if(champPrenom.value.trim() === ""){
+                alert("Veuillez entrer votre prénom !");
+            } else {
+                console.log("Formulaire validé (mais non envoyé) !");
+            }
+        });
+    </script>
+
+</body>
+</html>

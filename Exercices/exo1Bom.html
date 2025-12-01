@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice BOM + setProperty</title>
+
+    <style>
+/* variable css avec la couleur primaire bleu*/
+        :root {
+            --couleur-primaire: blue; /* couleur par défaut */
+        }
+
+        /* Utilisation de la variable CSS */
+        #paragraphe-style {
+            background-color: var(--couleur-primaire);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            width:100%;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="paragraphe-style">
+        Ceci est un paragraphe stylé grâce à une variable CSS.
+    </p>
+    <!-- ajouter un bouton changer la couleur -->
+    <button id="btn-changer-couleur">Changer la couleur</button>
+
+<!-- 1.javascript -->
+    <script>
+        // PARTIE A : BOM (fenêtre)
+        //cliquer sur le bouton pour changer la couleur de fond apres une fenetre contextuel affichant width et height du navigateur
+
+        const btn = document.getElementById("btn-changer-couleur");
+
+        btn.addEventListener("click", function () {
+
+            // Afficher la taille de la fenêtre
+            alert(
+                "Largeur fenêtre : " + window.innerWidth + "px\n" +
+                "Hauteur fenêtre : " + window.innerHeight + "px"
+            );
+
+            // PARTIE B : setProperty()
+
+            // Cibler le root pour changer la variable CSS en remplaçant par la couleur bleu
+           document.documentElement.style.setProperty("--couleur-primaire", "red");
+
+        });
+    </script>
+
+</body>
+</html>

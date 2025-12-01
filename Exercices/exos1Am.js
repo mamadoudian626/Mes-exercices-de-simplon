@@ -1,6 +1,6 @@
-// ======================================
+
 // 1. VARIABLES GLOBALES
-// ======================================
+
 
 // Nom de l'article
 let nomArticle = "Clavier Mécanique";
@@ -9,7 +9,7 @@ let prixUnitaire = 75.99;
 let quantite = 3;
 let clientFidele = true;
 let tauxReduction = 0.10;
-let TVA = 0.20;
+let TVA = 0.20;                                                                                    
 
 
 
@@ -67,3 +67,6 @@ console.log(
     prixFinal.toFixed(2) +
     " €."
 );
+
+
+
